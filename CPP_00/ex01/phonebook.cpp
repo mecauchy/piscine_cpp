@@ -22,3 +22,21 @@ void	Phonebook::AddContact(Contact newContact)
 		this->_contact[this->nbContact % 8] = newContact;
 	}
 }
+
+void	Phonebook::search( void )
+{
+	int	i = 0;
+
+	while (i < nbContact)
+	{
+		std::cout << "|";
+		std::cout << GetShortName( _contact[i].getName );
+		std::cout << "|";
+		std::cout << GetShortName( _contact[i].getName );
+		std::cout << "|";
+		std::cout << GetShortName( _contact[i].getName );
+		std::cout << "|";
+		std::cout << GetShortName( _contact[i].getName );
+		std::cout << "|";
+	}
+}

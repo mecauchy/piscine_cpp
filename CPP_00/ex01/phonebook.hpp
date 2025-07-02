@@ -12,7 +12,7 @@ class Phonebook
 	~Phonebook( void );
 	void	AddContact(Contact newContact);
 	void	ShowFullContact( void ) const;
-	
+	void	search();
 	
 	private :
 	
