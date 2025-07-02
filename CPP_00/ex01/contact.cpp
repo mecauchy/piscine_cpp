@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:34:07 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/02 11:23:19 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:20:34 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Contact::~Contact( void )
 		-> return si champ manquant.
 */
 
-void	Contact::Create()
+int	Contact::Create()
 {
 	std::cout << "Prenom : ";
 	std::getline(std::cin, _firstName);
@@ -48,7 +48,11 @@ void	Contact::Create()
 	std::cout << "Son plus lourd secret : ";
 	std::getline(std::cin, _darkestSecret);
 	if (_firstName.empty() || _lastName.empty() || _nickName.empty() || _phoneNumber.empty() || _darkestSecret.empty())
-		return ;
+	{
+		std::cout << "Please enter a valid argument, empty line is not autorized" << std::endl;
+		return 1;
+	}
+	return 0;
 }
 
 /*
