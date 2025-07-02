@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:31:24 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/01 18:07:21 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/02 10:02:24 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 
 # include "phonebook.hpp"
 # include "contact.hpp"
+
+std::string	GetShortName( std::string cmd );
 
 #endif
