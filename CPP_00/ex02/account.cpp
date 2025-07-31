@@ -6,12 +6,13 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 11:33:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/31 10:08:43 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:43:25 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <ctime>
+#include <iomanip>
 #include <iostream>
 
 int	Account::_nbAccounts = 0;
