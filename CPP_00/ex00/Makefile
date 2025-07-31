@@ -6,7 +6,7 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/02 09:38:11 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/07/02 14:39:07 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/07/31 15:11:51 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,17 +14,15 @@ NAME			=	megaphone
 
 OBJ_DIR			=	obj/.
 
-CC				=	g++
+CC				=	c++
 
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 
-SRC				=	./megaphone.cpp
+SRC				=	megaphone.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 
-RED				=	\033[1;31m
-
-YELLOW			=	\033[1;33m
+RED				=	\033[2;31m
 
 RESET			=	\033[0m
 
@@ -33,12 +31,12 @@ all				:	$(NAME)
 $(NAME)			:	$(OBJ)
 					@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o				:	%.c
+%.o				:	%.cpp
 					@$(CC) $(CFLAGS) -c $< -o $@
-					@echo "$(YELLOW)cpp $(RESET): \e[92mCompiling\e[m $(notdir $<)...\n"
+					@echo "cpp $(RESET): \e[92mCompiling\e[m $(notdir $<)..."
 
 clean			:
-					rm -rf $(OBJ)
+					@rm -rf $(OBJ)
 					@echo "$(RED)- Objects deleted !$(RESET)"
 
 fclean			:	clean

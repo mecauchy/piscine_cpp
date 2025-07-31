@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 09:38:37 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/02 11:42:11 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/31 16:13:08 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 Phonebook::Phonebook( void ) : nbContact(0)
 {
-	std::cout << "Phonebook constructor called" << std::endl;
+	// std::cout << "Phonebook constructor called" << std::endl;
 }
 
 Phonebook::~Phonebook()
 {
-	std::cout << "Phonebook constructor called" << std::endl;
+	// std::cout << "Phonebook constructor called" << std::endl;
 }
 
 void	Phonebook::AddContact(Contact newContact)
@@ -55,18 +55,21 @@ std::string	Contact::getNickName() const
 void	Phonebook::display( void )
 {
 	int	i = 0;
+	int	index = 0;
 	int	max = (nbContact < 8) ? nbContact : 8;
+	int	startIndex = (nbContact -1) % 8;
 
 	while (i < max)
 	{
+		index = (startIndex - i + 8) % 8;
 		std::cout << "|";
 		std::cout << std::setw(10) << i;
 		std::cout << "|";
-		std::cout << GetShortName( _contact[i].getFirstName() );
+		std::cout << GetShortName( _contact[index].getFirstName() );
 		std::cout << "|";
-		std::cout << GetShortName( _contact[i].getLastName() );
+		std::cout << GetShortName( _contact[index].getLastName() );
 		std::cout << "|";
-		std::cout << GetShortName( _contact[i].getNickName() );
+		std::cout << GetShortName( _contact[index].getNickName() );
 		std::cout << "|";
 		std::cout << std::endl;
 		i++;

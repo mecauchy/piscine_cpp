@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/01 13:35:53 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/07/31 15:30:37 by mcauchy-         ###   ########.fr        #
+#    Created: 2025/07/31 13:54:57 by mcauchy-          #+#    #+#              #
+#    Updated: 2025/07/31 15:10:58 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phonebook
+NAME	=	Account
 
-SRCS	=	main.cpp phonebook.cpp contact.cpp
+SRCS	=	Account.cpp tests.cpp
 
 OBJS_DIR	=	objs
 

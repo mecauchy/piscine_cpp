@@ -6,28 +6,20 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:34:07 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/02 13:20:34 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/31 17:11:35 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
 
-/*
-	Constructeur Contact
-*/
-
 Contact::Contact( void )
 {
-	std::cout << "Contact constructor called" << std::endl;
+	// std::cout << "Contact constructor called" << std::endl;
 }
-
-/*
-	Destructeur Contact
-*/
 
 Contact::~Contact( void )
 {
-	std::cout << "Contact destructor called" << std::endl;
+	// std::cout << "Contact destructor called" << std::endl;
 }
 
 /*
@@ -38,21 +30,31 @@ Contact::~Contact( void )
 int	Contact::Create()
 {
 	std::cout << "Prenom : ";
-	std::getline(std::cin, _firstName);
+	if (!std::getline(std::cin, _firstName) || std::cin.eof())
+		return (1);
+	// std::getline(std::cin, _firstName);
 	std::cout << "Nom de famille : ";
-	std::getline(std::cin, _lastName);
+	if (!std::getline(std::cin, _lastName) || std::cin.eof())
+		return (1);
+	// std::getline(std::cin, _lastName);
 	std::cout << "Surnom : ";
-	std::getline(std::cin, _nickName);
+	if (!std::getline(std::cin, _nickName) || std::cin.eof())
+		return (1);
+	// std::getline(std::cin, _nickName);
 	std::cout << "Numero de telephone :";
-	std::getline(std::cin, _phoneNumber);
+	if (!std::getline(std::cin, _phoneNumber) || std::cin.eof())
+		return (1);
+	// std::getline(std::cin, _phoneNumber);
 	std::cout << "Son plus lourd secret : ";
-	std::getline(std::cin, _darkestSecret);
+	if (!std::getline(std::cin, _darkestSecret) || std::cin.eof())
+		return (1);
+	// std::getline(std::cin, _darkestSecret);
 	if (_firstName.empty() || _lastName.empty() || _nickName.empty() || _phoneNumber.empty() || _darkestSecret.empty())
 	{
-		std::cout << "Please enter a valid argument, empty line is not autorized" << std::endl;
-		return 1;
+		std::cout << "Contact not added, please try again." << std::endl;
+		return (1);
 	}
-	return 0;
+	return (0);
 }
 
 /*

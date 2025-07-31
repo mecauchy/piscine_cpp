@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 11:33:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/31 11:58:26 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/07/31 14:37:07 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int		Account::checkAmount( void ) const
 
 void	Account::_displayTimestamp( void )
 {
-	std::time_t now = std::time(nullptr);
+	std::time_t now = std::time(0);
 	std::tm *tm = std::localtime(&now);
 	std::cout << "["
 			  << 1900 + tm->tm_year
@@ -112,7 +112,8 @@ bool	Account::makeWithdrawal( int withdrawal )
 		_totalNbWithdrawals++;
 		_totalAmount -= withdrawal;
 		std::cout << ";withdrawal:" << withdrawal
-				  << ";amount:" << _amount << std::endl;
+				  << ";amount:" << _amount
+				  << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
 		return (true);
 	}
 }
@@ -134,3 +135,19 @@ void	Account::displayStatus( void ) const
 			  << ";deposits:" << _nbDeposits
 			  << ";withdrawals:" << _nbWithdrawals << std::endl;
 }
+
+// int main(void)
+// {
+// 	Account acc1(100);
+// 	acc1.makeDeposit(50);
+// 	acc1.makeWithdrawal(30);
+// 	acc1.displayStatus();
+
+// 	Account acc2(200);
+// 	acc2.makeDeposit(5);
+// 	acc2.makeWithdrawal(200);
+// 	acc2.displayStatus();
+
+// 	Account::displayAccountsInfos();
+// 	return 0;
+// }
