@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 09:38:37 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/07/31 16:13:08 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/01 09:43:06 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 Phonebook::Phonebook( void ) : nbContact(0)
 {
-	// std::cout << "Phonebook constructor called" << std::endl;
 }
 
 Phonebook::~Phonebook()
 {
-	// std::cout << "Phonebook constructor called" << std::endl;
 }
 
 void	Phonebook::AddContact(Contact newContact)
