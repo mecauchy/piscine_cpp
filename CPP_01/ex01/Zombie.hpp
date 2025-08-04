@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 17:14:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/03 17:13:36 by mecauchy         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:43:13 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 // oblige de cree un constructeur par defaut pour pouvoir creer 
 // un tableau de Zombie[N]
 
-class Zombie {
+class Zombie 
+{
 			public:
 					Zombie();
 					Zombie(std::string name);

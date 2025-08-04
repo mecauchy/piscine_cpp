@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 17:15:35 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/03 17:15:12 by mecauchy         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:53:04 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+Zombie::Zombie() : _name("Unnamed Zombie")
 {
-	std::cout << _name << " is created." << std::endl;
+	std::cout << _name << " is created with default constructor." << std::endl;
 }
 
 Zombie::Zombie(std::string name) : _name(name)
 {
-	std::cout << _name << " is created." << std::endl;
+	std::cout << _name << " is created with param constructor." << std::endl;
 }
 
 Zombie::~Zombie()

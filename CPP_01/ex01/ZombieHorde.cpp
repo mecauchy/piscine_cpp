@@ -6,15 +6,15 @@ Zombie* zombieHorde(int N, std::string name)
 	if (N <= 0)
 	{
 		std::cerr << "Error: N must be greater than 0." << std::endl;
-		return (nullptr);
+		return (NULL);
 	}
 	if (name.empty())
 	{
 		std::cerr << "Error: Name cannot be empty." << std::endl;
-		return (nullptr);
+		return (NULL);
 	}
 	Zombie* horde = new Zombie[N];
 	for (i = 0; i < N; ++i)
-		horde[i].setName(name + std::to_string(i + 1));
+		horde[i].setName(name);
 	return (horde);
 }

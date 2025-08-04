@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/01 15:26:24 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/01 16:59:56 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/04 10:50:20 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=		Zombie
 
-SRCS		=		main.cpp Zombie.cpp zombieHorde.cpp
+SRCS		=		main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJS_DIR	=		objs
 
