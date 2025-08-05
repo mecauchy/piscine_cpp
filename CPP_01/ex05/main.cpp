@@ -5,24 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 10:33:24 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/05 11:20:04 by mcauchy-         ###   ########.fr       */
+/*   Created: 2025/08/05 16:00:46 by mcauchy-          #+#    #+#             */
+/*   Updated: 2025/08/05 16:02:55 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include <iostream>
+#include <string>
 
-int	main( void )
-{	
-	Weapon	club = Weapon("Tennis club");
-	HumanA	bob("bob", club);
-	bob.attack();
-	club.setType("Golf club");
-	HumanB	alice("alice");
-	alice.attack();
-	Weapon	gun("fire arm");
-	alice.setWeapon(gun);
-	alice.attack();
-}

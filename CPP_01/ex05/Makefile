@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/04 13:39:58 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/05 11:20:49 by mcauchy-         ###   ########.fr        #
+#    Created: 2025/08/05 15:58:34 by mcauchy-          #+#    #+#              #
+#    Updated: 2025/08/05 16:00:31 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Weapon
+NAME	=	level
 
-SRCS	=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS	=	main.cpp
 
 OBJS_DIR	=		objs
 
