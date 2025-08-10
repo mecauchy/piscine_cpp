@@ -3,22 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
+#    By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/05 15:58:34 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/05 16:00:31 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/07 14:14:40 by mecauchy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	level
 
-SRCS	=	main.cpp
+SRCS	=	Harl.cpp main.cpp
 
 OBJS_DIR	=		objs
 
 OBJS	=	$(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
-RED		=	\033[2;31m
+RED		=	\033[31m
 
 RESET	=	\033[0m
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 16:37:28 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/07 11:11:50 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:13:56 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <iostream>
 
 #define C_RESET "\033[0m"
+#define C_RED   "\033[0;31m"
+#define C_GREEN "\033[0;32m"
 #define C_YELLOW "\033[1;33m"
 
 class Harl

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 11:03:01 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/07 11:38:29 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:01:59 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Harl::Harl()
 {
-	std::cout << "Harl object created." << std::endl;
+	std::cout << C_GREEN << "Harl object created." << C_RESET << std::endl;
 }
 
 Harl::~Harl()
 {
-	std::cout << "Harl object destroyed." << std::endl;
+	std::cout << C_RED << "Harl object destroyed." << C_RESET << std::endl;
 }
 
 void Harl::debug()
@@ -33,15 +33,15 @@ void Harl::info()
 {
 std::cout << C_YELLOW << "[INFO]" << C_RESET << std::endl;
 	std::cout << "I cannot believe adding extra bacon costs more money." << std::endl;
-	std::cout << "You didn’t put enough bacon in my burger!" << std::endl;
-	std::cout << "you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << "You didn't put enough bacon in my burger!" << std::endl;
+	std::cout << "you did, I wouldn't be asking for more!" << std::endl;
 }
 
 void Harl::warning()
 {
 	std::cout << C_YELLOW << "[WARNING]" << C_RESET << std::endl;
 	std::cout << "I think I deserve to have some extra bacon for free." << std::endl;
-	std::cout <<  "I’ve been coming for years, whereas you started working here just last month." << std::endl;
+	std::cout <<  "I've been coming for years, whereas you started working here just last month." << std::endl;
 }
 
 void Harl::error()
@@ -75,5 +75,5 @@ void Harl::complain( std::string level )
 		}
 	}
 	std::cout << C_YELLOW << "[UNKNOWN LEVEL]" << C_RESET << std::endl;
-	std::cout << "No matching level found for: " << level << std::endl;
+	std::cout << "No matching level found for: " << level << std::endl << std::endl;
 }
