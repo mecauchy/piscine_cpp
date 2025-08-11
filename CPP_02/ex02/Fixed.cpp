@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/09 14:37:16 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/11 16:42:00 by mcauchy-         ###   ########.fr       */
+/*   Created: 2025/08/11 17:10:23 by mcauchy-          #+#    #+#             */
+/*   Updated: 2025/08/11 17:34:04 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,19 @@ std::ostream&	operator<<(std::ostream &os, const Fixed &other )
 {
 	os << other.toFloat();
 	return ( os );
+}
+
+Fixed&	Fixed::operator++( )
+{
+	this->_value++;
+	return ( *this );
+}
+
+// On retourne une copie de la valer *this, on incremente value
+Fixed&	Fixed::operator++( int )
+{
+	Fixed	tmp(*this);
+	
+	this->_value++;
+	return (tmp);
 }
