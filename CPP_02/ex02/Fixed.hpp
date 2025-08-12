@@ -22,7 +22,7 @@ class Fixed
 			Fixed&	operator=( const Fixed &other );
 			Fixed&	operator++(); // rien car operateur unaire
 			Fixed	operator++( int ); // on met int afin de differencier les 2 operateurs +
-			Fixed&	operato--();
+			Fixed&	operator--();
 			Fixed	operator--( int )
 
 			static float	min( float n1, float n2 );
