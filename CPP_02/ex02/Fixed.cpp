@@ -82,7 +82,7 @@ Fixed&	Fixed::operator++( )
 }
 
 // On retourne une copie de la valer *this, on incremente value
-Fixed&	Fixed::operator++( int )
+		Fixed Fixed::operator++( int )
 {
 	Fixed	tmp(*this);
 	
