@@ -15,14 +15,16 @@ class Fixed
 {
 	public:
 			Fixed();
-			Fixed( const Fixed &other);
+			Fixed( const Fixed &other );
 			Fixed( const int nb );
 			Fixed( const float nb );
 			
-			Fixed&	operator=( const Fixed &other);
+			Fixed&	operator=( const Fixed &other );
 			Fixed&	operator++(); // rien car operateur unaire
-			Fixed&	operator++(int); // on met int afin de differencier les 2 operateurs +
-			
+			Fixed	operator++( int ); // on met int afin de differencier les 2 operateurs +
+			Fixed&	operato--();
+			Fixed	operator--( int )
+
 			static float	min( float n1, float n2 );
 			static float	min( const float n1, const float n2 );
 			static float	max( float n1, float n2 );
