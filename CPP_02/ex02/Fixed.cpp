@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 17:10:23 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/11 17:34:04 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/12 14:32:58 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Fixed::Fixed() : _value(0)
 {
-	std::cout << C_GREEN << "Constructor called" << C_RESET << std::endl;
+	// std::cout << C_GREEN << "Constructor called" << C_RESET << std::endl;
 }
 
 Fixed::Fixed( const Fixed &other ): _value(0)
 {
-	std::cout << C_GREEN << "Copy constructor called" << C_RESET << std::endl;
+	// std::cout << C_GREEN << "Copy constructor called" << C_RESET << std::endl;
 	*this = other;
 }
 
@@ -36,7 +36,7 @@ Fixed::Fixed( const float nb ): _value(0)
 
 Fixed& Fixed::operator=( const Fixed &other)
 {
-	std::cout << C_GREEN << "Copy assignement called" << C_RESET << std::endl;
+	// std::cout << C_GREEN << "Copy assignement called" << C_RESET << std::endl;
 	// verif pour etre sure de ne pas s'auto affecter
 	if (this != &other)
 		this->_value = other._value;
@@ -45,7 +45,7 @@ Fixed& Fixed::operator=( const Fixed &other)
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called" << C_RESET << std::endl;
 }
 
 int		Fixed::getValue() const
@@ -82,7 +82,7 @@ Fixed&	Fixed::operator++( )
 }
 
 // On retourne une copie de la valer *this, on incremente value
-		Fixed Fixed::operator++( int )
+Fixed Fixed::operator++( int )
 {
 	Fixed	tmp( *this );
 	
@@ -90,15 +90,93 @@ Fixed&	Fixed::operator++( )
 	return ( tmp );
 }
 
-Fixed& Fixed::operator--()
+Fixed&	Fixed::operator--()
 {
 	this->_value--;
 	return ( *this );
 }
 
-Fixed Fixed::operator--( int )
+Fixed	Fixed::operator--( int )
 {
 	Fixed tmp( *this ); 
 	this->_value--;
-	return (tmp);
+	return ( tmp );
+}
+
+Fixed	Fixed::operator*( const Fixed &other )
+{
+	Fixed	tmp;
+	tmp._value = (this->_value * other._value) >> _fractionalBits;
+	return ( tmp );
+}
+
+Fixed	Fixed::operator/( const Fixed &other )
+{
+	Fixed	tmp;
+	tmp._value = ( this->_value << _fractionalBits ) / other._value;
+	return ( tmp );
+}
+
+Fixed	Fixed::operator+( const Fixed &other )
+{
+	Fixed	tmp;
+	tmp._value = this->_value + other._value;
+	return ( tmp );
+}
+
+Fixed	Fixed::operator-( const Fixed &other )
+{
+	Fixed	tmp;
+	tmp._value = this->_value - other._value;
+	return ( tmp );
+}
+
+bool	Fixed::operator>( const Fixed &other ) const
+{
+	return ( this->_value > other._value );
+}
+
+bool	Fixed::operator>=( const Fixed &other ) const
+{
+	return ( this->_value >= other._value );
+}
+
+bool	Fixed::operator<( const Fixed &other ) const
+{
+	return ( this->_value < other._value );
+}
+
+bool	Fixed::operator<=( const Fixed &other ) const
+{
+	return ( this->_value <= other._value );
+}
+
+bool	Fixed::operator==( const Fixed &other ) const
+{
+	return ( this->_value == other._value );
+}
+
+bool	Fixed::operator!=( const Fixed &other ) const
+{
+	return ( this->_value != other._value );
+}
+
+Fixed&	Fixed::min(Fixed &a, Fixed &b)
+{
+	return ( a < b ? a : b );
+}
+
+const Fixed&	Fixed::min(const Fixed &a, const Fixed &b)
+{
+	return ( a < b ? a : b );
+}
+
+Fixed&	Fixed::max(Fixed &a, Fixed &b)
+{
+	return ( a > b ? a : b );
+}
+
+const Fixed&	Fixed::max(const Fixed &a, const Fixed &b)
+{
+	return ( a > b ? a : b );
 }

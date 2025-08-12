@@ -20,15 +20,30 @@ class Fixed
 			Fixed( const float nb );
 			
 			Fixed&	operator=( const Fixed &other );
+
 			Fixed&	operator++(); // rien car operateur unaire
 			Fixed	operator++( int ); // on met int afin de differencier les 2 operateurs +
-			Fixed&	operator--();
-			Fixed	operator--( int )
 
-			static float	min( float n1, float n2 );
-			static float	min( const float n1, const float n2 );
-			static float	max( float n1, float n2 );
-			static float	max( const float n1, const float n2);
+			Fixed&	operator--();
+			Fixed	operator--( int ); // utilisation de tmp donc par de ref en retour 
+
+			Fixed	operator*( const Fixed &other );
+			Fixed	operator/( const Fixed &other );
+			Fixed	operator+( const Fixed &other );
+			Fixed	operator-( const Fixed &other );
+
+			bool	operator>( const Fixed &other ) const;
+			bool	operator<( const Fixed &other ) const;
+			bool	operator>=( const Fixed &other ) const;
+			bool	operator<=( const Fixed &other ) const;
+			bool	operator==( const Fixed &other ) const;
+			bool	operator!=( const Fixed &other ) const;
+
+			static Fixed&	min( Fixed &n1, Fixed &n2 );
+			static const Fixed&	min( const Fixed &n1, const Fixed &n2 );
+			static Fixed&	max( Fixed &n1, Fixed &n2 );
+			static const Fixed&	max( const Fixed &n1, const Fixed &n2 );
+
 			~Fixed();
 
 			int		getValue() const;

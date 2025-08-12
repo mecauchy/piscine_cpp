@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:37:16 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/11 16:42:00 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/12 14:10:42 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed() : _value(0)
 {
-	std::cout << C_GREEN << "Constructor called" << C_RESET << std::endl;
+	std::cout << C_GREEN << "Default Constructor called" << C_RESET << std::endl;
 }
 
 Fixed::Fixed( const Fixed &other ): _value(0)
@@ -25,18 +25,20 @@ Fixed::Fixed( const Fixed &other ): _value(0)
 
 Fixed::Fixed( const int nb ): _value(0)
 {
+	std::cout << C_GREEN << "Int constructor called" << C_RESET << std::endl;
 	_value = nb * (1 << _fractionalBits);
 }
 
 Fixed::Fixed( const float nb ): _value(0)
 {
 	// man roundf -> permet d'arrondir le float
+	std::cout << C_GREEN << "Float constructor called" << C_RESET << std::endl;
 	_value = static_cast<int>(roundf(nb * (1 << _fractionalBits)));
 }
 
 Fixed& Fixed::operator=( const Fixed &other)
 {
-	std::cout << C_GREEN << "Copy assignement called" << C_RESET << std::endl;
+	std::cout << C_GREEN << "Copy assignement operator called" << C_RESET << std::endl;
 	// verif pour etre sure de ne pas s'auto affecter
 	if (this != &other)
 		this->_value = other._value;
@@ -48,15 +50,16 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-int		Fixed::getValue() const
+int		Fixed::getRawBits() const
 {
-	std::cout << "[ getValue member called ]" << std::endl;
+	std::cout << "[ getRawBits() const member called ]" << std::endl;
 	return (_value);
 }
 
-void	Fixed::setValue( int value)
+void	Fixed::setRawBits( int const raw)
 {
-	_value = value;
+	std::cout << "[ setRawBits() member called ]" << std::endl;
+	_value = raw;
 }
 
 float	Fixed::toFloat() const
