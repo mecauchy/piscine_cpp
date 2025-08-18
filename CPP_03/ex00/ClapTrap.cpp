@@ -6,12 +6,11 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 09:54:28 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/13 15:34:39 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/15 15:33:53 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
 
 ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(2)
 {

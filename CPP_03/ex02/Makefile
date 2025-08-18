@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/13 09:29:59 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/15 15:18:23 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/15 16:59:41 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	Fixed
 
-SRCS	=	ClapTrap.cpp ScavTrap.cpp main.cpp
+SRCS	=	ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
 OBJS_DIR	=		objs
 

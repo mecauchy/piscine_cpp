@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/13 09:29:59 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/15 15:18:23 by mcauchy-         ###   ########.fr        #
+#    Created: 2025/08/17 13:13:18 by mcauchy-          #+#    #+#              #
+#    Updated: 2025/08/17 13:14:12 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Fixed
+NAME	=	Animal
 
-SRCS	=	ClapTrap.cpp ScavTrap.cpp main.cpp
+SRCS	=	Animal.cpp Cat.cpp Dog.cpp main.cpp
 
 OBJS_DIR	=		objs
 
