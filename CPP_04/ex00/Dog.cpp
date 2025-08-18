@@ -2,20 +2,27 @@
 
 Dog::Dog()
 {
-	type = "Dog";
+	_type = "Dog";
 	std::cout << "Dog default construcotr called" << std::endl;
 }
 
 Dog::Dog( const std::string &name )
 {
-	type = "Dog";
-	std::cout << type << " Parameterized constructor called for " << name << std::endl;
+	_type = "Dog";
+	std::cout << _type << " Parameterized constructor called for " << name << std::endl;
 }
 
-Dog::Dog( const Dog &other )
+Dog::Dog( const Dog &other ) : Animal( other )
 {
-	type = "Dog";
+	_type = "Dog";
 	std::cout << "Dog Copy constructor called" << std::endl;
+}
+
+Dog&	Dog::operator=( const Dog &other )
+{
+	if ( this != &other )
+		Animal::operator=(other);
+	return ( *this );
 }
 
 Dog::~Dog()

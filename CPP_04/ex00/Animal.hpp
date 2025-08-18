@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 13:15:33 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/17 15:13:55 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/18 13:59:24 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,13 @@ class	Animal
 				Animal( const std::string &name );
 				Animal( const Animal &other );
 				Animal&	operator=( const Animal &other );
-				// std::string& getType( void );
-				const std::string& getType();
-				~Animal();
+				const std::string& getType() const;
+				virtual ~Animal();
 
-				void	makeSound();
+				virtual void	makeSound() const;
 
 	protected:
-				std::string	type;
+				std::string	_type;
 };
 
 #endif

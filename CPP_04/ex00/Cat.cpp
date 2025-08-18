@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:33:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/17 14:43:54 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/18 14:03:23 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,27 @@
 
 Cat::Cat()
 {
-	type = "Cat";
+	_type = "Cat";
 	std::cout << "Cat default construcotr called" << std::endl;
 }
 
 Cat::Cat( const std::string &name )
 {
-	type = "Cat";
-	std::cout << type << " Parameterized constructor called for " << name << std::endl;
+	_type = "Cat";
+	std::cout << _type << " Parameterized constructor called for " << name << std::endl;
 }
 
-Cat::Cat( const Cat &other )
+Cat::Cat( const Cat &other ) : Animal( other )
 {
-	type = "Dog";
+	// _type = "Cat";
 	std::cout << "Cat Copy constructor called" << std::endl;
+}
+
+Cat&	Cat::operator=( const Cat &other )
+{
+	if ( this != &other )
+		Animal::operator=(other);
+	return ( *this );
 }
 
 Cat::~Cat()
