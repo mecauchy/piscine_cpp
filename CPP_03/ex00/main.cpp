@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 10:18:51 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/13 15:31:30 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/18 13:18:30 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int	main(void)
 	// Test fonctions de base
 	std::cout << C_YELLOW << "\n\n\t\t Combat de base \n\t\t" << C_RESET << std::endl;
 	robot1.attack("C3PO");
+	std::cout << std::endl;
 	robot2.takeDamage(2);
+	std::cout << std::endl;
 	robot2.beRepaired(1);
 	
 	// Test limites d'énergie

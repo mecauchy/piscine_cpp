@@ -6,21 +6,20 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 09:54:28 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/15 16:49:38 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/18 12:28:16 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-
-ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(2)
+ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap Default constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << C_RED << "ClapTrap Destructor called" << C_RESET << std::endl;
+	std::cout << C_RED << "Destructor called" << C_RESET << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=( const ClapTrap &other )
@@ -35,37 +34,45 @@ ClapTrap&	ClapTrap::operator=( const ClapTrap &other )
 	return ( *this );
 }
 
-ClapTrap::ClapTrap( const std::string &name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(2)
+ClapTrap::ClapTrap( const std::string &name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap Parameterized constructor called for " << _name << std::endl;
+	std::cout << "Parameterized constructor called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &other ) : _name(other._name), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDamage(other._attackDamage)
 {
-	std::cout << "ClapTrap Copy constructor called for " << _name << std::endl;
+	std::cout << "Copy constructor called for " << _name << std::endl;
 }
 
-void	ClapTrap::attack( const std::string &target )
+void	ClapTrap::attack( const std::string& target )
 {
-	if ( _hitPoints > 0 && _energyPoints > 0 )
+	if (_energyPoints > 0 && _hitPoints > 0)
 	{
 		_energyPoints--;
-		std::cout << "ClapTrap " << _name << " attacks " << target << " for " << _attackDamage << " damage!" << std::endl;
-		std::cout << C_DARK_GRAY << _name << " used " << C_LIGHT_GRAY << "1 energy point " << C_DARK_GRAY << "for this attack"<< C_RESET << std::endl;
-		std::cout << C_DARK_GRAY << "(Energy point : " << _energyPoints << ")" << C_RESET << std::endl;
+		std::cout << "ClapTrap " << _name << " attacks " << target << " causing " << _hitPoints << " points of damage! " << std::endl;
+		std::cout << C_DARK_GRAY << "Energy points after attack : " << _energyPoints << C_RESET << std::endl;
 	}
 	else
 	{
-		std::cout << C_RED << "ClapTrap " << _name << " cannot attack! No energy or HitPoint left." << C_RESET << std::endl;
+		std::cout << C_RED << " ClapTrap " << _name << " has no energy points left to attack!" << C_RESET << std::endl;
 	}
 }
 
 void		ClapTrap::takeDamage( unsigned int amount )
 {
-	std::cout << C_DARK_GRAY << "hit point before attack : " << _hitPoints << C_RESET << std::endl;
-	_hitPoints -= amount;
-	std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
-	std::cout << C_DARK_GRAY << "hit point after attack : " << _hitPoints << C_RESET << std::endl;
+	std::cout << "amount -> " << amount << " hit point -> " << _hitPoints << std::endl;
+	if (amount > _hitPoints)
+	{
+		_hitPoints = 0;
+		std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
+	}
+	else
+	{
+		std::cout << C_DARK_GRAY << "hit point before attack : " << _hitPoints << C_RESET << std::endl;
+		_hitPoints -= amount;
+		std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
+		std::cout << C_DARK_GRAY << "hit point after attack : " << _hitPoints << C_RESET << std::endl;
+	}
 }
 
 void	ClapTrap::beRepaired( unsigned int amount )

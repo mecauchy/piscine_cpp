@@ -6,13 +6,13 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 09:54:28 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/15 15:33:53 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/18 13:18:15 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(2)
+ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
@@ -34,7 +34,7 @@ ClapTrap&	ClapTrap::operator=( const ClapTrap &other )
 	return ( *this );
 }
 
-ClapTrap::ClapTrap( const std::string &name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(2)
+ClapTrap::ClapTrap( const std::string &name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "Parameterized constructor called for " << _name << std::endl;
 }
@@ -48,11 +48,9 @@ void	ClapTrap::attack( const std::string& target )
 {
 	if (_energyPoints > 0 && _hitPoints > 0)
 	{
-		std::cout << C_DARK_GRAY << "hit point before attack : " << _hitPoints << C_RESET << std::endl;
 		_energyPoints--;
 		std::cout << "ClapTrap " << _name << " attacks " << target << " causing " << _hitPoints << " points of damage! " << std::endl;
-		std::cout << C_DARK_GRAY << "hit point after attack : " << _hitPoints << C_RESET<< std::endl;
-		std::cout << C_DARK_GRAY << "Energy points left: " << _energyPoints << C_RESET << std::endl;
+		std::cout << C_DARK_GRAY << "Energy points after attack : " << _energyPoints << C_RESET << std::endl;
 	}
 	else
 	{
@@ -62,10 +60,19 @@ void	ClapTrap::attack( const std::string& target )
 
 void		ClapTrap::takeDamage( unsigned int amount )
 {
-	std::cout << C_DARK_GRAY << "hit point before attack : " << _hitPoints << C_RESET << std::endl;
-	_hitPoints -= amount;
-	std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
-	std::cout << C_DARK_GRAY << "hit point after attack : " << _hitPoints << C_RESET << std::endl;
+	std::cout << "amount -> " << amount << " hit point -> " << _hitPoints << std::endl;
+	if (amount > _hitPoints)
+	{
+		_hitPoints = 0;
+		std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
+	}
+	else
+	{
+		std::cout << C_DARK_GRAY << "hit point before attack : " << _hitPoints << C_RESET << std::endl;
+		_hitPoints -= amount;
+		std::cout << "ClapTrap " << _name << " takes damage of " << amount << " points! " << std::endl;
+		std::cout << C_DARK_GRAY << "hit point after attack : " << _hitPoints << C_RESET << std::endl;
+	}
 }
 
 void	ClapTrap::beRepaired( unsigned int amount )

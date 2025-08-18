@@ -6,11 +6,11 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/13 09:29:59 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/15 16:59:41 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/18 13:07:58 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Fixed
+NAME	=	FragTrap
 
 SRCS	=	ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
