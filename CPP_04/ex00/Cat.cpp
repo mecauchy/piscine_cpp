@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:33:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/18 14:03:23 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:12:20 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ Cat&	Cat::operator=( const Cat &other )
 	if ( this != &other )
 		Animal::operator=(other);
 	return ( *this );
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "Meow" << std::endl;
 }
 
 Cat::~Cat()

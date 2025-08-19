@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:41:42 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/17 14:58:06 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:12:44 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class	Cat : public Animal
 				Cat( const std::string &name );
 				Cat( const Cat &other );
 				Cat&	operator=( const Cat &other );
+				void makeSound() const;
+
 				~Cat();
 };
 

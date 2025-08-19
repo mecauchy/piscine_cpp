@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 13:17:26 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/18 14:04:20 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:06:22 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,9 @@ Animal::~Animal()
 
 void	Animal::makeSound() const
 {
-	if ( _type == "Cat" )
-		std::cout << "Meow" << std::endl;
-	else if ( _type == "Dog" )
-		std::cout << "Woaf" << std::endl;
-	else
-		std::cout << "Animal cannot make sound" << std::endl;
+// 	if ( _type == "Cat" )
+// 		std::cout << "Meow" << std::endl;
+// 	else if ( _type == "Dog" )
+// 		std::cout << "Woaf" << std::endl;
+	std::cout << "Animal cannot make sound" << std::endl;
 }

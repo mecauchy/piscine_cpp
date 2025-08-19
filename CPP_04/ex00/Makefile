@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/17 13:13:18 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/17 13:14:12 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/19 16:04:53 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	Animal
 
-SRCS	=	Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRCS	=	Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 
 OBJS_DIR	=		objs
 

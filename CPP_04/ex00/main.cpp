@@ -6,13 +6,15 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 13:15:26 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/18 16:12:49 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/19 16:04:32 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -32,6 +34,15 @@ int main()
 	j->makeSound();
 	std::cout << std::endl;
 	meta->makeSound();
+	std::cout << std::endl;
+	std::cout << "------------------" << std::endl;
+	const WrongAnimal* wrongMeta = new WrongAnimal();
+	std::cout << std::endl;
+	const WrongAnimal* wrongCat = new WrongCat();
+	std::cout << std::endl;
+	wrongMeta->makeSound();
+	std::cout << std::endl;
+	wrongCat->makeSound();
 	std::cout << std::endl;
 	return 0;
 }
