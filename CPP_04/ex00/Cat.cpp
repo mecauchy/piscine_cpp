@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:33:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/19 15:12:20 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 09:38:57 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	_type = "Cat";
-	std::cout << "Cat default construcotr called" << std::endl;
+	std::cout << "Cat default constructor called" << std::endl;
 }
 
 Cat::Cat( const std::string &name )

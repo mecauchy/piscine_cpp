@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 13:15:26 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/19 16:04:32 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 09:40:39 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,16 @@ int main()
 	wrongMeta->makeSound();
 	std::cout << std::endl;
 	wrongCat->makeSound();
+	std::cout << std::endl;
+	delete meta;
+	std::cout << std::endl;
+	delete j;
+	std::cout << std::endl;
+	delete i;
+	std::cout << std::endl;
+	delete wrongMeta;
+	std::cout << std::endl;
+	delete wrongCat;
 	std::cout << std::endl;
 	return 0;
 }

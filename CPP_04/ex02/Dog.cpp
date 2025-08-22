@@ -4,21 +4,21 @@ Dog::Dog()
 {
 	_type = "Dog";
 	_brain = new Brain();
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << C_DARK_GRAY << "Dog default constructor called" << C_RESET << std::endl;
 }
 
 Dog::Dog( const std::string &name )
 {
 	_type = "Dog";
 	_brain = new Brain();
-	std::cout << _type << " Parameterized constructor called for " << name << std::endl;
+	std::cout << C_DARK_GRAY << _type << " Parameterized constructor called for " << name << C_RESET << std::endl;
 }
 
 Dog::Dog( const Dog &other ) : AAnimal( other )
 {
 	_type = "Dog";
 	_brain = new Brain( *other._brain );
-	std::cout << "Dog Copy constructor called" << std::endl;
+	std::cout << C_DARK_GRAY << "Dog Copy constructor called" << C_RESET << std::endl;
 }
 
 Dog&	Dog::operator=( const Dog &other )
@@ -44,5 +44,5 @@ Brain	*Dog::getBrain() const
 Dog::~Dog()
 {
 	delete _brain;
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << C_RED << "Dog destructor called and _brain has been destroyed" << C_RESET << std::endl;
 }

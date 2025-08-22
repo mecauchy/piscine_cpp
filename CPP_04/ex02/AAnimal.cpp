@@ -14,17 +14,17 @@
 
 AAnimal::AAnimal() : _type("AAnimal")
 {
-	std::cout << "AAnimal default constructor called (type = " << _type << ")" << std::endl;
+	std::cout << C_DARK_GRAY << "AAnimal default constructor called (type = " << _type << ")" << C_RESET << std::endl;
 }
 
 AAnimal::AAnimal( const std::string &name ) : _type(name)
 {
-	std::cout << "AAnimal parameterized constructor called for" << _type << std::endl;
+	std::cout << C_DARK_GRAY << "AAnimal parameterized constructor called for " << _type << C_RESET << std::endl;
 }
 
 AAnimal::AAnimal( const AAnimal &other ) : _type(other._type)
 {
-	std::cout << "AAnimal copy constructor called (type = " << _type << ")" << std::endl;
+	std::cout << C_DARK_GRAY << "AAnimal copy constructor called (type = " << _type << ")" << C_RESET << std::endl;
 }
 
 AAnimal&	AAnimal::operator=( const AAnimal &other )
@@ -42,14 +42,5 @@ const std::string&	AAnimal::getType() const
 
 AAnimal::~AAnimal()
 {
-	std::cout << "AAnimal destructor called (type " << _type << ")" << std::endl;
-}
-
-void	AAnimal::makeSound() const
-{
-// 	if ( _type == "Cat" )
-// 		std::cout << "Meow" << std::endl;
-// 	else if ( _type == "Dog" )
-// 		std::cout << "Woaf" << std::endl;
-	std::cout << "AAnimal cannot make sound" << std::endl;
+	std::cout << C_RED << "AAnimal destructor called (type " << _type << ")" << C_RESET << std::endl;
 }

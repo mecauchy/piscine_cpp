@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 13:57:12 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/20 16:36:26 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 10:01:23 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,17 @@ void	Brain::setIdea( unsigned int index, const std::string &idea )
 		std::cout << C_RED << "ERROR\n" << C_DARK_GRAY << "index out of range" << C_RESET << std::endl;
 }
 
-const std::string	&Brain::getIdea( unsigned int index ) const
+std::string Brain::getIdea( unsigned int index ) const
 {
-	if ( index > 100 )
+	if ( index >= 100 )
 	{
-		std::cout << C_RED << "ERROR\n" << C_DARK_GRAY << "index out of range" << C_RESET << std::endl;
-		// return ("h");
+		std::cerr << C_RED << "ERROR\n" << C_DARK_GRAY << "index out of range" << C_RESET << std::endl;
+		return ("");
 	}
 	return (_ideas[index]);
 }
 
 Brain::~Brain()
 {
-	std::cout << "Destructor brain called0" << std::endl;
+	std::cout << "Destructor brain called" << std::endl;
 }

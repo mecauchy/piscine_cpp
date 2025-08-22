@@ -34,7 +34,7 @@ class	AAnimal
 				const std::string& getType() const;
 				virtual ~AAnimal();
 
-				virtual void	makeSound() const;
+				virtual void	makeSound() const = 0;
 
 	protected:
 				std::string	_type;

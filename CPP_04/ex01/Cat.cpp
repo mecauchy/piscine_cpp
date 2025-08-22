@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:33:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/20 16:29:45 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 09:41:16 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Cat::Cat()
 {
 	_type = "Cat";
 	_brain = new Brain();
-	std::cout << "Cat default construcotr called" << std::endl;
+	std::cout << "Cat default constructor called" << std::endl;
 }
 
 Cat::Cat( const std::string &name )

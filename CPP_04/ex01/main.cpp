@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:45:00 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/20 16:42:33 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 10:04:22 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ int main()
 	// Test erreur
 	smartDog.getBrain()->setIdea(100, "Invalid");
 	smartDog.getBrain()->getIdea(150);
-	
-	return 0;
+
+	return (0);
 }

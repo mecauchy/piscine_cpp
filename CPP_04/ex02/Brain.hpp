@@ -21,7 +21,7 @@ class Brain
 				~Brain();
 
 				void	setIdea( unsigned int index, const std::string &idea );
-				const std::string&	getIdea( unsigned int index ) const;
+				std::string	getIdea( unsigned int index ) const;
 
 	private:
 				std::string	_ideas[100];

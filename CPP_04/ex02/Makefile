@@ -6,11 +6,11 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/17 13:13:18 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/20 16:58:38 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/22 10:07:59 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Animal
+NAME	=	AAnimal
 
 SRCS	=	AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp \
 			Brain.cpp main.cpp
