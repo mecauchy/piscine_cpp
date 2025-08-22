@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 15:49:19 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/19 16:13:30 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 11:36:33 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ WrongCat::WrongCat()
 
 WrongCat::WrongCat( const WrongCat &other ) : WrongAnimal(other)
 {
-	_type = "WrongCat";
+	_type = other._type;
 	std::cout << "WrongCat Copy constructor called" << std::endl;
 }
 

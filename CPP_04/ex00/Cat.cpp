@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:33:08 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/22 09:38:57 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 11:36:15 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Cat::Cat( const std::string &name )
 
 Cat::Cat( const Cat &other ) : Animal( other )
 {
-	// _type = "Cat";
+	_type = other._type;
 	std::cout << "Cat Copy constructor called" << std::endl;
 }
 
