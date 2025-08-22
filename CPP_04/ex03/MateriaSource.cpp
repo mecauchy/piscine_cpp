@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:16:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/21 18:01:05 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 11:03:17 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,11 @@ void	MateriaSource::_clearMateria()
 {
 	for ( int i = 0; i < 4; i++ )
 	{
-		delete _materia[i];
-		_materia[i] = NULL; 
+		if ( _materia[i] )
+		{
+			delete _materia[i];
+			_materia[i] = NULL; 
+		}
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:57:31 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/21 15:10:14 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 10:49:56 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void	Character::equip(AMateria* m)
 		if (_inventory[i] == NULL)
 		{
 			_inventory[i] = m;
+			std::cout << this->getName() << " equipped " << m->getType() << " at index : " << i << std::endl;
 			return ;
 		}
 	}

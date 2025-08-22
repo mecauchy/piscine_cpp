@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 10:06:33 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/08/21 14:52:37 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/08/22 11:20:29 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 AMateria::AMateria() : _type("Default")
 {
-	std::cout << C_DARK_GRAY << "[\tAMateria default constructor called\t]" << C_RESET << std::endl; 
+	std::cout << C_DARK_GRAY << "\tAMateria default constructor called\t\t\t" << C_RESET << std::endl; 
 }
 
 AMateria::AMateria( std::string const &type ) : _type(type)
 {
-	std::cout << C_DARK_GRAY << "[\tAMateria Parameterized constructor called with type : " << type << "]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tAMateria Parameterized constructor called with type : " << type << "" << C_RESET << std::endl;
 }
 
 AMateria::AMateria( const AMateria &other ) : _type(other._type)
 {
-	std::cout << C_DARK_GRAY << "[\tAMateria copy constructor called\t]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tAMateria copy constructor called\t\t\t" << C_RESET << std::endl;
 }
 
 AMateria&	AMateria::operator=( const AMateria &other )
@@ -46,5 +46,5 @@ void	AMateria::use( ICharacter& target )
 
 AMateria::~AMateria()
 {
-	std::cout << C_DARK_GRAY << "[\tAMateria destructor called\t]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tAMateria destructor called\t\t\t\t" << C_RESET << std::endl;
 }

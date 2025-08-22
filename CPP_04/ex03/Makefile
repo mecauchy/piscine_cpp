@@ -6,7 +6,7 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/17 13:13:18 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/08/21 17:51:51 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/08/22 11:00:36 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ RESET	=	\033[0m
 
 CC		=	c++
 
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g3
 
 RM		=	/bin/rm -rf
 

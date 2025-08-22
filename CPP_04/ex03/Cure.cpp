@@ -3,17 +3,17 @@
 
 Cure::Cure() : AMateria("cure")
 {
-	std::cout << C_DARK_GRAY << "[\tCure default constructor called\t]" << C_RESET << std::endl; 
+	std::cout << C_DARK_GRAY << "\tCure default constructor called\t\t\t" << C_RESET << std::endl; 
 }
 
 Cure::Cure(std::string const &type) : AMateria(type)
 {
-	std::cout << C_DARK_GRAY << "[\tCure Parameterized constructor called with type: " << type << "]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tCure Parameterized constructor called with type: " << type << "" << C_RESET << std::endl;
 }
 
 Cure::Cure(const Cure &other) : AMateria(other)
 {
-	std::cout << C_DARK_GRAY << "[\tCure copy constructor called\t]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tCure copy constructor called\t\t\t" << C_RESET << std::endl;
 }
 
 Cure& Cure::operator=(const Cure &other)
@@ -35,5 +35,5 @@ void Cure::use(ICharacter& target)
 
 Cure::~Cure()
 {
-	std::cout << C_DARK_GRAY << "[\tCure destructor called\t]" << C_RESET << std::endl;
+	std::cout << C_DARK_GRAY << "\tCure destructor called\t\t\t\t" << C_RESET << std::endl;
 }
