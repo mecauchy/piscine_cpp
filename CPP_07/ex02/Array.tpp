@@ -33,7 +33,25 @@ Array<T>::Array(const Array &other) : _data(NULL), _size(other.size())
 template < typename T >
 Array<T>&	Array<T>::operator=(const Array &other)
 {
-	
+	if ( this == other )
+		return ( *this );
+	T newData = NULL;
+	if ( _size != 0 )
+	{
+		newData = new T[other._size];
+		for (std::size_t i = 0; i < other._size; i++)
+			newData[i] = other._data[i];
+	}
+	delete[] _data;
+	_data = newData;
+	_size = other.size;
+	return ( *this );
+}
+
+template < typename T >
+Array<T>::~Array()
+{
+	delete{} _data;
 }
 
 #endif
