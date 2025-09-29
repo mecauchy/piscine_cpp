@@ -48,10 +48,27 @@ Array<T>&	Array<T>::operator=(const Array &other)
 	return ( *this );
 }
 
+// modifie o l'elemen a l'index index donne
+template < typename T >
+T&	Array<T>::operator[](std::size_t index)
+{
+	if (index >= _size)
+		throw std::out_of_range("Array index out of range");
+	return _data[index];
+}
+
+template < typename T >
+const T&	Array<T>::operator[](std::size_t index) const
+{
+	if (index >= _size)
+		throw std::out_of_range("Array index out of range");
+	return _data[index];
+}
+
 template < typename T >
 Array<T>::~Array()
 {
-	delete{} _data;
+	delete[] _data;
 }
 
 #endif
