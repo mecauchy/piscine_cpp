@@ -6,7 +6,8 @@
 #include <stdexcept>
 #include <string>
 #include <cstring>
-#include "Array.hpp"
+#include <cstddef>
+
 
 #define C_RED		"\033[31m"
 #define C_YELLOW	"\033[33m"
@@ -30,5 +31,7 @@ class Array
 				T*				_data;
 				std::size_t		_size;
 };
+
+#include "Array.tpp"
 
 #endif

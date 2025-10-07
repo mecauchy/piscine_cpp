@@ -30,13 +30,14 @@ Array<T>::Array(const Array &other) : _data(NULL), _size(other.size())
 			_data[i] = other._data[i];
 	}
 }
+
 template < typename T >
 Array<T>&	Array<T>::operator=(const Array &other)
 {
-	if ( this == other )
+	if ( this == &other )
 		return ( *this );
-	T newData = NULL;
-	if ( _size != 0 )
+	T* newData = NULL;
+	if ( other._size != 0 )
 	{
 		newData = new T[other._size];
 		for (std::size_t i = 0; i < other._size; i++)
@@ -44,17 +45,17 @@ Array<T>&	Array<T>::operator=(const Array &other)
 	}
 	delete[] _data;
 	_data = newData;
-	_size = other.size;
+	_size = other._size;
 	return ( *this );
 }
 
-// modifie o l'elemen a l'index index donne
+// modifie o l'element a l'index index donne
 template < typename T >
 T&	Array<T>::operator[](std::size_t index)
 {
 	if (index >= _size)
 		throw std::out_of_range("Array index out of range");
-	return _data[index];
+	return (_data[index] );
 }
 
 template < typename T >
@@ -62,7 +63,13 @@ const T&	Array<T>::operator[](std::size_t index) const
 {
 	if (index >= _size)
 		throw std::out_of_range("Array index out of range");
-	return _data[index];
+	return ( _data[index] );
+}
+
+template < typename T >
+std::size_t Array<T>::size() const
+{
+	return ( _size );
 }
 
 template < typename T >

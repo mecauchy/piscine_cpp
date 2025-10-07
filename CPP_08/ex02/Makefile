@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 12:35:48 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/10/07 14:20:34 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/09/28 14:07:58 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Span
+NAME	=	Easyfind
 
-SRCS	= 	Span.cpp main.cpp
+SRCS	= 	Span.cpp
 
 OBJS_DIR	=	objs
 
