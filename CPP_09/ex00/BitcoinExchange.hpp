@@ -24,10 +24,11 @@ class BitcoinExchange
 
 	private:
 	
-		std::map<std::string, float> _data;
+		std::map<std::string, double> _data;
+		void trim(std::string& str);
 		bool isValidDate(const std::string& date) const;
-		bool isValidValue(const std::string& valueStr, float& value) const;
-		float getExchangeRate(const std::string& date) const;
+		bool isValidValue(const std::string& valueStr, double& value);
+		double getExchangeRate(const std::string& date);
 };
 
 #endif
