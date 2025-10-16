@@ -20,7 +20,7 @@ class BitcoinExchange
 		~BitcoinExchange();
 
 		void loadData(const std::string& filename);
-		void processInput(const std::string& filename) const;
+		void processInput(const std::string& filename) ;
 
 	private:
 	

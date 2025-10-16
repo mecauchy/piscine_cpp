@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 12:35:48 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/10/10 21:39:29 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/10/16 13:46:49 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	MutanStack
+NAME	=	BitcoinExchange
 
-SRCS	= 	main.cpp
+SRCS	= 	BitcoinExchange.cpp main.cpp
 
 OBJS_DIR	=	objs
 
