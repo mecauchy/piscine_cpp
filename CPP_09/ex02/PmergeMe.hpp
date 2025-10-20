@@ -1,0 +1,41 @@
+#ifndef PMERGEME_HPP
+
+#define PMERGEME_HPP
+
+#include <iostream>
+#include <vector>
+#include <deque>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
+
+class PmergeMe
+{
+	public:
+
+		PmergeMe();
+		PmergeMe(const PmergeMe& other);
+		PmergeMe& operator=(const PmergeMe& other);
+		~PmergeMe();
+
+		void	addNumber(int nb);
+		void	sortAndMeasureTime();
+		void	printBeforeAndAfter();
+
+	private:
+
+		std::vector<int>	_vector;
+		std::deque<int>		_deque;
+
+		void	mergeInsertSortVector( std::vector<int>& vec, int left, int right );
+		void	mergeInsertSortDeque( std::deque<int>& deq, int left, int right );
+
+		void	insertSortVector(std::vector<int>& vec, int left, int right);
+		void	insertSortDeque(std::deque<int>& deq, int left, int right);
+
+		void	mergeVector(std::vector<int>& vec, int left, int mid, int right);
+		void	mergeDeque(std::deque<int>& deq, std::deque<int>& left, std::deque<int>& right);
+
+};
+
+#endif

@@ -6,13 +6,13 @@
 #    By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 12:35:48 by mcauchy-          #+#    #+#              #
-#    Updated: 2025/10/17 11:43:04 by mcauchy-         ###   ########.fr        #
+#    Updated: 2025/10/20 11:57:11 by mcauchy-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	RPN
+NAME	=	PmergeMe
 
-SRCS	= 	RPN.cpp main.cpp
+SRCS	= 	PmergeMe.cpp main.cpp
 
 OBJS_DIR	=	objs
 
