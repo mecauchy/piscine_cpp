@@ -147,25 +147,31 @@ void	PmergeMe::sortAndMeasureTime()
 
 void	PmergeMe::printBeforeAndAfter()
 {
-	std::cout << "Before sorting: ";
+	std::cout << "Before: ";
 	for (size_t i = 0; i < _vector.size(); ++i)
 	{
-		std::cout << _vector[i] << " ";
-		if (i >= 19) // n'affiche que les 20 premiers éléments
+		std::cout << _vector[i];
+		if (i < _vector.size() - 1)
+			std::cout << " ";
+		if (i >= 4 && _vector.size() > 10) // n'affiche que les 5 premiers éléments si > 10
 		{
-			std::cout << "...";
+			std::cout << " [...]";
 			break;
 		}
 	}
 	std::cout << std::endl;
+}
 
-	std::cout << "After sorting:  ";
+void	PmergeMe::printSorted()
+{
 	for (size_t i = 0; i < _vector.size(); ++i)
 	{
-		std::cout << _vector[i] << " ";
-		if (i >= 19) // n'affiche que les 20 premiers éléments
+		std::cout << _vector[i];
+		if (i < _vector.size() - 1)
+			std::cout << " ";
+		if (i >= 4 && _vector.size() > 10) // n'affiche que les 5 premiers éléments si > 10
 		{
-			std::cout << "...";
+			std::cout << " [...]";
 			break;
 		}
 	}

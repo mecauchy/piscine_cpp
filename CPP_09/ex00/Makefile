@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	BitcoinExchange
+NAME	=	btc
 
 SRCS	= 	BitcoinExchange.cpp main.cpp
 
